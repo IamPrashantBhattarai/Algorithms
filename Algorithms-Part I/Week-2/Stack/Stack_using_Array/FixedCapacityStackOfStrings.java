@@ -1,5 +1,3 @@
-package Stack.Stack_using_Array;
-
 public class FixedCapacityStackOfStrings {
     
     private String[] s;
@@ -27,6 +25,10 @@ public class FixedCapacityStackOfStrings {
         String item = s[--N];
         s[N] = null;
         return item;
+    }
+
+    public boolean isFull() {
+        return N == s.length;
     }
 
 
