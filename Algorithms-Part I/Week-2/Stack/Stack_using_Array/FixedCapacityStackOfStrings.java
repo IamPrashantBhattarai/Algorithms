@@ -45,17 +45,7 @@ public class FixedCapacityStackOfStrings {
         System.out.println(stack.pop()); // Outputs: World
         System.out.println(stack.pop()); // Outputs: Hello
 
-        // Check if the stack is empty
-        System.out.println("Stack is empty: " + stack.isEmpty()); // Outputs: true
-
-        // Fill the stack and check if it is full
-        stack.push("One");
-        stack.push("Two");
-        stack.push("Three");
-        stack.push("Four");
-        stack.push("Five");
-
-        System.out.println("Stack is full: " + stack.isFull()); // Outputs: true
+        
     }
 }
 
