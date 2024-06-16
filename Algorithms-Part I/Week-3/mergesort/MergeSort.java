@@ -19,19 +19,27 @@ public class MergeSort {
             else  a[k] = aux[i++];
         }     
 
-        assert isSorted(a, lo, hi);   //postcondition: a[lo....hi] sorted
+        assert isSorted(a, lo, hi);  
+    } //postcondition: a[lo....hi] sorted
 
         //Recursive sort function
-        private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
-            if (hi <= lo) return;
-            int mid = lo + (hi - lo) / 2;
-            sort(a, aux, lo, mid);
-            sort(a, aux, mid+1 , hi);
-            merge(a, aux, lo, mid, hi);
-
-        }
-
+    private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+        if (hi <= lo) return;
+        int mid = lo + (hi - lo) / 2;
+        sort(a, aux, lo, mid);
+        sort(a, aux, mid+1 , hi);
+        merge(a, aux, lo, mid, hi);
     }
 
-    
+        //public sort function
+    public static void sort(Comparable[] a){
+        Comparable[] aux = new Comparable[a.length];
+        sort(a , aux, 0, a.length -1);
+    }
+
+    //Helper function for less
+
 }
+
+    
+
