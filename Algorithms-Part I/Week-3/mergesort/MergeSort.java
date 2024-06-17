@@ -52,6 +52,33 @@ public class MergeSort {
         return true;
     }
 
+    // Main function to test the sort implementation
+    public static void main(String[] args) {
+        // Sample array of integers
+        Integer[] array = {34, 7, 23, 32, 5, 62};
+        
+        // Print array before sorting
+        System.out.println("Before sorting:");
+        printArray(array);
+
+        // Sort the array
+        MergeSort.sort(array);
+
+        // Print array after sorting
+        System.out.println("After sorting:");
+        printArray(array);
+    }
+
+    // Utility function to print an array
+    private static void printArray(Comparable[] array) {
+        for (Comparable item : array) {
+            System.out.print(item + " ");
+        }
+        System.out.println();
+    }
+
+
+
 }
 
     
