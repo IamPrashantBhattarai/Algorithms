@@ -25,6 +25,19 @@ public class studentComparator {
         return section;
     }
     
+    //Comparator class
+    private static class ByName implements Comparator<Student> {
+        public int compare(Student v, Student w) {
+            return v.name.compareTo(w.name);
+        }
+    }
+
+    private static class BySection implements Comparator<Student> {
+        public int compare(Student v, Student w) {
+            return v.section - w.section;
+        }
+    }
+    
 
     
     
