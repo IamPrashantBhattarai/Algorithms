@@ -1,5 +1,4 @@
 public class MergeSort {
-
     //Merge function
     private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
         assert isSorted(a, lo, mid);
