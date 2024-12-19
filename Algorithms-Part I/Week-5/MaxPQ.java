@@ -28,5 +28,26 @@ public class MaxPQ<Key extends Comparable<Key>> {
         return max;
     }
 
-    
+    // Helper function to maintain heap order by swimming up
+    private void swim(int k) {
+        while (k > 1 && less(k / 2, k)){
+            exch(k, k / 2);
+            k = k / 2;
+        }
+    }
+
+    // Helper function to maintain heap order by sinking down
+    private void sink(int k) {
+        while (2 * k <= N) { // While there's at least one child
+            int j = 2 * k;   // Left child index
+            if (j < N && less(j, j + 1)) { // Choose larger child
+                j++;
+            }
+            if (!less(k, j)) { // If the parent is not less than the larger child
+                break;
+            }
+            exch(k, j);       // Exchange parent with the larger child
+            k = j;            // Move down to the child index
+        }
+    }
 }
