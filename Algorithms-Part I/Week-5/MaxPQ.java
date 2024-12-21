@@ -50,4 +50,17 @@ public class MaxPQ<Key extends Comparable<Key>> {
             k = j;            // Move down to the child index
         }
     }
+
+    //Helper function to compare both elements
+    private boolean less(int i, int j) {
+        return pq[i].compareTo(pq[j]) < 0;
+    }
+
+    //Helper function to exchange the elements in the array
+    private void exch(int i, int j) {
+        Key temp = pq[i];
+        pq[i] = pq[j];
+        pq[j] = temp;
+    }
 }
+
