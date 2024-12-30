@@ -60,7 +60,7 @@ public class MaxPQ<Key extends Comparable<Key>> {
     private void exch(int i, int j) {
         Key temp = pq[i];
         pq[i] = pq[j];
-        pq[j] = temp;
+        pq[j] = temp; //the temp variable is used to hold the value temporarily
     }
 }
 
